@@ -1,0 +1,139 @@
+:root {
+	--color-primary: #1B89DA;
+	--color-secondary: #ddd;
+
+	--font-family: Arial, sans-serif;
+}
+
+body { margin: 0; padding: 0; min-height:  100vh; }
+
+.aside {
+	background-color: var(--color-primary);
+	color: #fff;
+	position: relative;
+	width: 200px;
+}
+
+.btn {
+	border: 0 none;
+	border-radius: 0;
+	cursor: pointer;
+	font-family: var(--font-family);
+	font-size: 1rem;
+	outline: 0;
+	padding: 1rem;
+}
+
+.btn--primary {
+	background-color: var(--color-primary);
+	color: #fff;
+}
+
+.btn--secondary {
+	background-color: var(--color-secondary);
+}
+
+.btn--toolkit {
+	position: relative;
+}
+
+.btn--toolkit::before {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: .75rem;
+	bottom: 0;
+	content: '';
+	display: block;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.btn--toolkit-remove::before {
+	background-image: url(../img/icon--x.png);
+}
+
+.btn--toolkit-down::before {
+	background-image: url(../img/icon--arrow-down.png);
+}
+
+.btn--toolkit-up::before {
+	background-image: url(../img/icon--arrow-up.png);
+}
+
+.component {
+	padding: 0 2rem;
+	z-index: 1;
+}
+
+.component:hover {
+	position: relative;
+}
+
+.component:hover > :nth-child(2)  {
+	outline: 1px solid aqua;
+	z-index: 10;
+}
+
+.component:hover .component__toolkit {
+	display: block;
+}
+
+.component__toolkit {
+	display: none;
+	right: 0;
+	position: absolute;
+	width: 2rem;
+}
+
+.main {
+	display: flex;
+	flex-grow: 1;
+	justify-content: center;
+}
+
+.main-buttons {
+	bottom: 1rem;
+	font-size: 0;
+	position: fixed;
+	right: 1rem;
+}
+
+.main-buttons .btn {
+	margin-left: 1rem;
+}
+
+.main-container {
+	display: flex;
+	min-height: 100vh;
+}
+
+.nav {
+	bottom: 0;
+	overflow-y: scroll;
+	position: fixed;
+	top: 0;
+	width: inherit;
+}
+
+.nav__link {
+	color: #fff;
+	display: block;
+	font-family: var(--font-family);
+	overflow: hidden;
+	padding: .5rem;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.nav__link:hover {
+	background-color: rgba(255, 255, 255, .25);
+}
+
+.nav__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}

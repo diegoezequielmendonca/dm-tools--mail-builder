@@ -1,0 +1,12 @@
+{
+  "name": "dm-tools--mail-builder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"start": "node components.js"
+  },
+  "author": "Diego Ezequiel Mendonca",
+  "license": "ISC"
+}
